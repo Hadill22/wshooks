@@ -16,6 +16,7 @@ const AddMovies = ({
       [e.target.name]: e.target.value,
     });
   };
+  console.log(newMovie);
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -29,29 +30,25 @@ const AddMovies = ({
               type="text"
               name="title"
               placeholder="Put your title here ..."
-              onchange={handleChange}
+              onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group
-            className="mb-3"
-            controlId="exampleForm.ControlTextarea1"
-            onchange={handleChange}
-          >
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Description</Form.Label>
             <Form.Control
               as="textarea"
               name="description"
               rows={3}
-              onchange={handleChange}
+              onChange={handleChange}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Poster Url</Form.Label>
             <Form.Control
               type="text"
-              name="PosterUrl"
+              name="posterUrl"
               placeholder="Put your Poster Url here ..."
-              onchange={handleChange}
+              onChange={handleChange}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -59,8 +56,8 @@ const AddMovies = ({
             <Form.Control
               type="number"
               name="rating"
-              placeholder="Put your rating Url here ..."
-              onchange={handleChange}
+              placeholder="Put your rating here ..."
+              onChange={handleChange}
             />
           </Form.Group>
         </Form>
